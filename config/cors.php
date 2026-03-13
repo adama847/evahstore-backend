@@ -19,6 +19,8 @@ return [
 
     'allowed_origins' => [
         'http://localhost:5173',
+        'http://localhost:5174',
+        'https://admin-evahstore.vercel.app',
         'http://127.0.0.1:5500',      // ton front local actuel
         'https://evaah-tau.vercel.app' // front en production
     ],

@@ -112,16 +112,14 @@ class ProductController extends Controller
      * GET /api/stats  (admin uniquement)
      */
     public function stats()
-    {
-        $byCategory = Product::selectRaw('category, count(*) as count')
-            ->groupBy('category')
-            ->pluck('count', 'category');
-
-        return response()->json([
-            'total'       => Product::count(),
-            'byCategory'  => $byCategory,
-        ]);
-    }
+{
+    return response()->json([
+        'total' => Product::count(),
+        'bracelet' => Product::where('category', 'bracelet')->count(),
+        'bestseller' => Product::where('category', 'bestseller')->count(),
+        'perruque' => Product::where('category', 'perruque')->count(),
+    ]);
+}
 
     // ── Helpers ──────────────────────────────────────────────
 
