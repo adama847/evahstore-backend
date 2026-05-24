@@ -20,7 +20,7 @@ return [
         'http://127.0.0.1:5500',
         'https://admin-evahstore.vercel.app',
         'https://evaah-tau.vercel.app',
-        'https://admin-evah.vercel.app',
+        'https://evaahs.vercel.app',
     ],
 
     'allowed_origins_patterns' => [],
